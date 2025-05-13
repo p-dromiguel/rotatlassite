@@ -1,0 +1,434 @@
+@font-face {
+  font-family: 'ablation';
+  src: url('fonts/Ablation Extra Bold.otf') format('opentype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #011014;
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  background-color: #011014;
+  border-bottom: 1px solid #333;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  width: 150px;
+  height: 120px;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.main-nav {
+  display: flex;
+}
+
+.main-nav.active {
+  animation: slideDown 0.3s ease-in-out;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.actions {
+  display: flex;
+  gap: 20px;
+}
+
+.login-btn {
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.explore-btn {
+  background-color: #FFD700;
+  border: none;
+  padding: 10px 20px;
+  color: #000;
+  cursor: pointer;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 72px;
+  letter-spacing: 20px;
+  font-family: 'ablation', sans-serif;
+  margin: 0;
+}
+
+.hero span {
+  display: block;
+  font-size: 20px;
+  letter-spacing: 10px;
+  font-family: 'ablation', sans-serif;
+  margin-top: -10px;
+}
+
+.subtitle {
+  font-size: 18px;
+  margin: 20px 0;
+  color: #bbb;
+}
+
+.hero-actions {
+  margin-top: 40px;
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 400px;
+}
+
+#search-bar {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  text-align: center;
+}
+
+.search-btn {
+  background-color: #FFD700;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#suggestions-list {
+  display: block;
+  width: 80%;
+  margin: 5px auto;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+#suggestions-list li {
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#suggestions-list li:hover {
+  background-color: #f0f0f0;
+}
+
+.cards-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 50px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 30%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #bbb;
+}
+
+.call-to-action {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.call-to-action h2 {
+  font-size: 36px;
+  color: #ffffff;
+}
+
+.call-to-action p {
+  margin-top: 20px;
+  color: #bbb;
+  font-size: 16px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 800px;
+  background-color: #011014;
+  flex-wrap: wrap;
+}
+
+.quadrado {
+  display: flex;
+  justify-content: space-between;
+  background-color: #E4EBF6;
+  border-radius: 10px;
+  width: 70%;
+  height: 750px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  flex-wrap: wrap;
+}
+
+.texto {
+  flex: 1;
+  padding: 20px;
+  color: #000;
+  font-size: 45px;
+  font-family: 'Inter', sans-serif;
+  text-align: left;
+}
+
+.textin {
+  font-size: 18px;
+}
+
+.texto2 {
+  color: #5683D2;
+}
+
+.imagem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  max-width: 50%;
+}
+
+#map {
+  height: 750px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.surpreenda-me-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #FF6F61;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.surpreenda-me-btn:hover {
+  background-color: #ff4c3a;
+}
+
+.mensagem-destino,
+.nome-destino,
+.texto-gerado {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+.nome-destino {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.texto-gerado {
+  background-color: #E4EBF6;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 1024px) {
+  .card {
+    width: 48%;
+  }
+
+  .quadrado {
+    flex-direction: column;
+    height: auto;
+    width: 90%;
+  }
+
+  #map {
+    height: 400px;
+    width: 100%;
+  }
+
+  .imagem {
+    max-width: 100%;
+    margin-top: 30px;
+  }
+
+  .container {
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #011014;
+    padding: 20px;
+    z-index: 999;
+  }
+
+  .main-nav.active {
+    display: flex;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+    letter-spacing: 10px;
+  }
+
+  .texto {
+    font-size: 28px;
+    padding: 10px;
+  }
+
+  .textin {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 36px;
+    letter-spacing: 6px;
+  }
+
+  .hero span {
+    font-size: 16px;
+    letter-spacing: 5px;
+  }
+
+  .call-to-action h2 {
+    font-size: 24px;
+  }
+
+  .card-content h3 {
+    font-size: 16px;
+  }
+
+  .card-content p {
+    font-size: 12px;
+  }
+
+  .surpreenda-me-btn {
+    width: 100%;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
